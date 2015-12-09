@@ -110,6 +110,7 @@ $('.outro').on('click', '.startQuiz', function(){
         //reset variables to start quiz again
         questionNum = 0;             
         correctTotal = 0;	
+        $('.results').html('');
 });
 
 //Display Question
