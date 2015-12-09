@@ -17,8 +17,6 @@ body {
     color: black;
     text-align: center;
     font-family: 'Alex Brush', cursive;
-}
-p {
     font-size: 2em;
 }
 a {
@@ -29,12 +27,16 @@ a {
 a:hover {
     color: red;
 }
+section {
+    padding: 4em 2em 2em;
+    margin-top:1em;
+}
 .content {
     width:75%;
     border: 2px solid black;
     background-color: white;;
     border-radius: 1em;
-    padding: 2em;
+    padding: 1em;
     margin:0 auto;
 }
 /* Header styles 
@@ -42,15 +44,14 @@ a:hover {
 */
 header {
     width:100%;
-    padding: 2em 2em 0;
     vertical-align: middle;
+    height: 100px;
+    margin: 0 auto;
 }
 .logo {
-    font-size: 2em;
     color: orange;   
 }
 h1 {
-    font-size: 4em;
     display: inline-block;
     position: relative;
     top: -.2em;
@@ -58,11 +59,10 @@ h1 {
 }
 
 /* Intro */
-.intro {
-    padding: 6em;
+.welcome {
+    margin-bottom: 1em;
 }
 .startQuiz {
-    font-size: 2em;
     border: 2px solid red;
     border-radius: 1em;
     padding:.5em;
@@ -80,29 +80,38 @@ h1 {
     background-image: url("../images/hyacinths.jpg");
     background-position: center center;
     background-size: cover;
-    padding:6em;
+    height:360px;
+    text-align: center;
 }
 .question {
-    
+    margin-bottom: 1em;
+}
+.options {
+    display: inline-block;
+    text-align: left;
+}
+.options input {
+    margin-right: .5em;
+}
+/* Outro */
+.results {
+    margin-top: 1em;
 }
 
-/* Outro */
-.outro {
-    padding: 6em;
-}
-.outro h2 {
-    font-size:3em;
-}
 /* Footer styles 
 	(all the styles inside the < footer > tag)
 */
 footer {
     border-top: 2px solid gray;
-    padding: 2em;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    margin: 0 auto;
 }
 .iconCredit {
     font-family: 'Helvetica', sans-serif;
-    font-size: 1em;
+    font-size:12px;
 }
 
 

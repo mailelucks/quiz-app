@@ -44,12 +44,85 @@ var questions = [
         answer: 2
     },
 ];
-    
+
+// Variables
+	var questionNum = 0;
+	var questionTotal = questions.length;
+	var correctTotal = 0;
+    var feedback = [
+	"You are a true greenthumb!", "Let's take a stroll through the garden, you almost got them all right!", "Were you paying attention at the nursery? Try again!" , "Uh oh...don't quit your day job!"
+];
+
+//Start Quiz Click
 $('.startQuiz').on('click', function(){
 		$('.intro').hide();
 		$('.outro').hide();
 		$('.quiz').show();
 		displayQuestion();
 });
+    
+//Quiz Functionality
+$('.quiz').on('click', '#option', function(){
+
+    var userGuess = $("input[id='option']:checked").val();
+	var correctAnswer = questions[questionNum].answer;
+    if (userGuess == correctAnswer) {  
+    	//if correct answer was selected    
+      	correctTotal++;
+    } 
+});
+    
+ $('.quiz').on('click', '#option', function(){
+    //quiz is finished, show result-section
+    if ((questionNum+1) == questionTotal) { 
+      	$('.outro').show();
+    	$('.score').text('Completed! You have scored ' + correctTotal + ' out of ' + questionTotal + '!');
+    	//load correct feedback based on correctTotal 
+    	if (correctTotal === questionTotal) {
+    		$('.results').append(feedback[0]);
+    	}
+    	else if (correctTotal === 0) {
+    		$('.results').append(feedback[3]);
+    	}
+        else if ((correctTotal <= 2) && (correctTotal > 1)){
+    		$('.results').append(feedback[2]);
+    	}
+    	else {
+    		$('.results').append(feedback[1]);
+    	}  
+    	$('.startQuiz').show();
+  		//hide other "screens"
+    	$('.quiz').hide();
+    	$('.intro').hide();
+      
+    } else {
+   		//continue to next question
+    	questionNum++;
+    	displayQuestion();
+    }
+  });
+
+//New Game
+$('.outro').on('click', '.startQuiz', function(){
+    $('.intro').show();
+    $('.quiz').hide();
+    $('.outro').hide();
+        //reset variables to start quiz again
+        questionNum = 0;             
+        correctTotal = 0;	
+});
+
+//Display Question
+function displayQuestion() {
+    $('.quiz').css('background-image' , 'url(images/'+questions[questionNum].background+'.jpg');
+    $('.question p').text(questions[questionNum].question);
+    $('.options').empty();
+    var optionsTotal = questions[questionNum].options.length;
+    for (var i = 0; i < optionsTotal; i++) {
+        $('.options').append('<input type="radio" id="option" class="option" name="option" value=' + i + '>' + questions[questionNum].options[i] + '<br>')
+    }
+    
+}
+
     
 });
