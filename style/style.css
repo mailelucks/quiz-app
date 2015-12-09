@@ -1,0 +1,112 @@
+/* CSS reset 
+	(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+/* General styles 
+	(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    color: black;
+    text-align: center;
+    font-family: 'Alex Brush', cursive;
+}
+p {
+    font-size: 2em;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+a:hover {
+    color: red;
+}
+.content {
+    width:75%;
+    border: 2px solid black;
+    background-color: white;;
+    border-radius: 1em;
+    padding: 2em;
+    margin:0 auto;
+}
+/* Header styles 
+	(all the styles inside the < header > or < nav > tags) 
+*/
+header {
+    width:100%;
+    border-bottom: 2px solid gray;
+    padding: 2em 2em 0;
+    vertical-align: middle;
+}
+.logo {
+    font-size: 2em;
+    color: orange;   
+}
+h1 {
+    font-size: 4em;
+    display: inline-block;
+    position: relative;
+    top: -.2em;
+    padding:0 1em;
+}
+
+/* Intro */
+.intro {
+    padding: 6em;
+}
+#startQuiz {
+    font-size: 2em;
+    border: 2px solid red;
+    border-radius: 1em;
+    padding:.5em;
+    background-color: white;
+    margin-top:1em;
+}
+#startQuiz:hover {
+    background-color: red;
+    color:white;
+    border-color: black;
+    cursor: pointer;
+}
+/* Questions */
+.quiz {
+    background-image: url("../images/hyacinths.jpg")!important;;
+    background-position: center center;
+    background-size: cover;
+    padding:6em;
+}
+.question {
+    
+}
+
+/* Outro */
+.outro {
+    padding: 6em;
+}
+.outro h2 {
+    font-size:3em;
+}
+/* Footer styles 
+	(all the styles inside the < footer > tag)
+*/
+footer {
+    border-top: 2px solid gray;
+    padding: 2em;
+}
+.iconCredit {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
+}
+
+
+/* Responsive styles 
+	(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+*/
