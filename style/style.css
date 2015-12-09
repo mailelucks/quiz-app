@@ -12,12 +12,17 @@
 /* General styles 
 	(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
-
+html {
+    height:100%;
+    width:100%;
+}
 body {
     color: black;
     text-align: center;
     font-family: 'Alex Brush', cursive;
     font-size: 2em;
+    height: 100%;
+    width:100%;
 }
 a {
     text-decoration: none;
@@ -28,8 +33,9 @@ a:hover {
     color: red;
 }
 section {
-    padding: 3em 2em 2em;
-    margin-top:1em;
+    padding: 2em;
+    height:300px;
+    background-repeat:no-repeat;
 }
 .content {
     width:18em;
@@ -39,14 +45,23 @@ section {
     padding: 1em;
     margin:0 auto;
 }
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+main {
+    display: table-row;
+}
 /* Header styles 
 	(all the styles inside the < header > or < nav > tags) 
 */
 header {
     width:100%;
     vertical-align: middle;
-    height: 100px;
+    height: 1px;
     margin: 0 auto;
+    display:table-row
 }
 .logo {
     color: orange;   
@@ -77,10 +92,11 @@ h1 {
 }
 /* Questions */
 .quiz {
-    background-image: url("../images/hyacinths.jpg");
-    background-position: center center;
+    background-image: url("../images/hyacinths.jpg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height:390px;
     text-align: left;
 }
 .question {
@@ -104,11 +120,10 @@ h1 {
 */
 footer {
     border-top: 2px solid gray;
-    padding: 1em 0;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
+    padding: 1em;
     margin: 0 auto;
+    height:1px;
+    background: white;
 }
 .iconCredit {
     font-family: 'Helvetica', sans-serif;
