@@ -97,7 +97,9 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center center;
     text-align: left;
+    height: 100%;
 }
 .question {
     margin-bottom: 1em;
