@@ -24,7 +24,7 @@ var questions = [
     },
      //Question 3
     {
-        question: 'The flowers close at night, and reopen in the morning. The genus name honors Captain William Clark of the Lewis and Clark expedition to the Northwest in 1806.',
+        question: 'The flowers close at night, and reopen in the morning. The genus name honors Captain William Clark of the Lewis and Clark expedition to the Northwest.',
         background: 'clarkia',
         options: ['Pink Petticoats', 'Evening Primrose', 'Farewell to Spring'],
         answer: 2
